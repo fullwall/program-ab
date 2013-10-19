@@ -66,17 +66,6 @@ public class AIMLProcessor {
         that = trimTag(that, "that");
         topic = trimTag(topic, "topic");
         template = trimTag(template, "template");
-        if (language.equals("JP") || language.equals("jp")) {
-            String morphPattern = JapaneseTokenizer.morphSentence(pattern);
-            System.out.println("<pattern>"+pattern+"</pattern> --> <pattern>"+morphPattern+"</pattern>");
-            pattern = morphPattern;
-            String morphThatPattern = JapaneseTokenizer.morphSentence(that);
-            System.out.println("<that>"+that+"</that> --> <that>"+morphThatPattern+"</that>");
-            that = morphThatPattern;
-            String morphTopicPattern = JapaneseTokenizer.morphSentence(topic);
-            System.out.println("<topic>"+topic+"</topic> --> <topic>"+morphTopicPattern+"</topic>");
-            topic = morphTopicPattern;
-        }
         Category c = new Category(0, pattern, that, topic, template, aimlFile);
         categories.add(c);
     }

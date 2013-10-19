@@ -71,20 +71,6 @@
 			<artifactId>json</artifactId>
 			<version>20090211</version>
 		</dependency>
-        <dependency>
-			<groupId>net.reduls</groupId>
-			<artifactId>sanmoku</artifactId>
-			<version>0.0.5</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/sanmoku-0.0.5.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>net.reduls</groupId>
-			<artifactId>sanmoku-feature-ex</artifactId>
-			<version>0.0.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/sanmoku-feature-ex-0.0.1.jar</systemPath>
-		</dependency>  
 	</dependencies>
 
 	<ciManagement>

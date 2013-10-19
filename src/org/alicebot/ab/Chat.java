@@ -114,7 +114,6 @@ public class Chat {
         inputHistory.add(input);
         response = AIMLProcessor.respond(input, that, topic, this);
         String normResponse = bot.preProcessor.normalize(response);
-        normResponse = JapaneseTokenizer.morphSentence(normResponse); //response.trim(); //
         String sentences[] = bot.preProcessor.sentenceSplit(normResponse);
         for (int i = 0; i < sentences.length; i++) {
           that = sentences[i];
@@ -155,7 +154,6 @@ public class Chat {
         responseHistory.printHistory();*/
         try {
         String norm = bot.preProcessor.normalize(request);
-        norm = JapaneseTokenizer.morphSentence(norm);
         if (MagicBooleans.trace_mode) System.out.println("normalized = "+norm);
         String sentences[] = bot.preProcessor.sentenceSplit(norm);
         History<String> contextThatHistory = new History<String>("contextThat");
